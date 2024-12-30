@@ -24,8 +24,8 @@
   --text: #222;
   --text-dark: #eee;
 
-  --font-first: "Inter";
-  --font-second: "Helvetica", sans-serif;
+  --font-first: "Inter", "Helvetica", "sans-serif";
+  --font-second: "Helvetica";
 
   --btn-first: #18f;
 
@@ -371,18 +371,6 @@ hr {
   .container {
     max-width: 800px;
     margin: 0 auto;
-  }
-  .tarjeta-container {
-    & .tarjeta {
-      & .tarjeta-contenido {
-        & .tarjeta-item {
-          padding: 0;
-          .tarjeta-precio {
-            font-size: 1.4rem;
-          }
-        }
-      }
-    }
   }
 
   /* .grid-1-3 {
