@@ -1,0 +1,12 @@
+{
+  "name": "22_redux",
+  "version": "1.0.0",
+  "description": "En este repositorio encontrarás los recursos para seguir el [Curso de _Redux_ con _Vanilla JavaScript_](https://www.youtube.com/watch?v=-vr_VrT6v6c) de [Jonathan MirCha](https://jonmircha.com/).",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx json-server --watch db.json --port 5555"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

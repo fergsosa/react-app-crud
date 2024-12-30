@@ -1,0 +1,34 @@
+{
+  "players": [
+    {
+      "id": 0,
+      "player": "Messi",
+      "team": "Barcelona"
+    },
+    {
+      "id": 1,
+      "player": "Di María",
+      "team": "Real Madrid"
+    },
+    {
+      "id": 3,
+      "player": "Ronaldo",
+      "team": "Real Madrid"
+    },
+    {
+      "id": 4,
+      "player": "Maradona",
+      "team": "Napoli"
+    },
+    {
+      "id": 5,
+      "player": "Di Stéfano",
+      "team": "Real Madrid"
+    },
+    {
+      "id": 6,
+      "player": "Chino Zelarayan",
+      "team": "Belgrano"
+    }
+  ]
+}
