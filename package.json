@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "fake-api-crud": "json-server --watch src/CRUD/api/db.json --port7777",
-    "predeploy": "npm run build",
+    "pre-deploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

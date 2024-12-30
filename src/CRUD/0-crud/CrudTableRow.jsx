@@ -1,4 +1,8 @@
 import React from "react";
+import imgDelete from "../img/delete.svg";
+import imgEdit from "../img/edit.svg";
+// import imgEdit2 from "/image/edit.svg";
+// import imgDelete2 from "/image/delete.svg";
 
 const CrudTableRow = ({ dt, setDataToEdit, deleteData }) => {
   let { player, team, id } = dt;
@@ -7,8 +11,12 @@ const CrudTableRow = ({ dt, setDataToEdit, deleteData }) => {
       <td>{player}</td>
       <td>{team}</td>
       <td>
-        <button onClick={() => setDataToEdit(dt)}>Editar</button>
-        <button onClick={() => deleteData(id)}>Eliminar</button>
+        <button className="btn-edit" onClick={() => setDataToEdit(dt)}>
+          <img src={imgEdit} alt="editar" />
+        </button>
+        <button onClick={() => deleteData(id)}>
+          <img src={imgDelete} alt="Borrar" />
+        </button>
       </td>
     </tr>
   );

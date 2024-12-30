@@ -241,6 +241,7 @@ hr {
       font-weight: 600;
       border: none;
       background-color: #07e;
+      background-color: transparent;
       border-radius: 4px;
       color: #e5e5e4;
       cursor: pointer;
@@ -248,12 +249,16 @@ hr {
       margin: 0.5rem;
       user-select: none;
 
-      &:hover {
+      /* &:hover {
         box-shadow: inset 2px 2px 6px #05d, inset -2px -2px 6px #19f;
         color: #fff;
       }
       &:active {
         box-shadow: inset 2px 2px 6px #137, inset -2px -2px 6px #17f;
+      } */
+      &:active img,
+      &:hover img {
+        filter: opacity(0.75);
       }
     }
   }
@@ -263,98 +268,6 @@ hr {
     }
     &:last-child {
       border-radius: 1rem;
-    }
-  }
-}
-/* Estilos para la tarjeta */
-.tarjeta-container {
-  /* display: grid; */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0.5rem;
-  background-color: red;
-  .tarjeta {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: 1px solid #444;
-    background-color: #2d2d2d;
-    border-radius: 1rem;
-    padding: 10px;
-    margin-bottom: 10px;
-
-    .tarjeta-imagen {
-      border: 1px solid #444;
-      height: 150px;
-      object-fit: contain;
-      border-radius: 7px;
-      padding: 0.4rem;
-      margin-right: 10px;
-      background-color: #fff;
-    }
-
-    .tarjeta-contenido {
-      flex: 1;
-      margin-top: 0.5rem;
-      * {
-        margin: 0;
-        margin-top: 0.5rem;
-      }
-
-      .tarjeta-titulo,
-      .tarjeta-descripcion {
-        line-height: 1.5em;
-        overflow: hidden;
-        word-wrap: break-word;
-        text-overflow: ellipsis;
-      }
-
-      .tarjeta-titulo {
-        font-weight: bold;
-        height: 2em;
-        line-height: 1em;
-      }
-
-      .tarjeta-descripcion {
-        margin-bottom: 10px;
-        height: 6em;
-      }
-      .tarjeta-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 1rem;
-
-        .tarjeta-precio {
-          font-weight: bold;
-          font-size: 1.8rem;
-        }
-
-        button {
-          color: white;
-          border: none;
-          padding: 5px 10px;
-          border-radius: 4px;
-          cursor: pointer;
-
-          &.boton-agregar {
-            text-wrap: nowrap;
-            border: 1px solid darkgreen;
-            background-color: lime;
-            color: darkgreen;
-            &:hover {
-              background-color: darkgreen;
-              color: lime;
-            }
-          }
-
-          &.boton-quitar {
-            background-color: #af4c4c;
-            &:hover {
-              background-color: #7c3434;
-            }
-          }
-        }
-      }
     }
   }
 }
