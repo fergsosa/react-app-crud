@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignora la carpeta específica
+src/CRUD/js-Crud
