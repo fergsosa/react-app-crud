@@ -1,6 +1,6 @@
 import React from "react";
-import imgDelete from "../img/delete.svg";
 import imgEdit from "../img/edit.svg";
+import imgDelete from "../img/delete.svg";
 
 const CrudTableRow = ({ dt, setDataToEdit, deleteData }) => {
   let { player, team, id } = dt;

@@ -1,6 +1,6 @@
 import React from "react";
-import imgDelete from "../img/delete.svg";
 import imgEdit from "../img/edit.svg";
+import imgDelete from "../img/delete.svg";
 // import imgEdit2 from "/image/edit.svg";
 // import imgDelete2 from "/image/delete.svg";
 
