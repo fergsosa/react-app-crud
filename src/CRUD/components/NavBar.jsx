@@ -4,17 +4,15 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <nav>
-      <NavLink to="/">Crud-app</NavLink>
-      <NavLink to="/crudApi">Crud-Api</NavLink>
-      <NavLink to="/CrudApiRouter">CrudApiRouter</NavLink>
-      <NavLink to="/AppContext">AppContext</NavLink>
-      <NavLink to="/CrudApiReducer">CrudApiReducer</NavLink>
-      <NavLink to="/AppRedux">AppRedux</NavLink>
-      <NavLink to="/App_RoutertContext">App_RoutertContext</NavLink>
-      <NavLink to="/AppReducers_RouterContext">
-        AppReducers_RouterContext
-      </NavLink>
-      <NavLink to="/AppRedux_RouterContext">AppRedux_RouterContext</NavLink>
+      <NavLink to="/">App</NavLink>
+      <NavLink to="/crudApi">Api</NavLink>
+      <NavLink to="/CrudApiRouter">Api-Router</NavLink>
+      <NavLink to="/AppContext">Context</NavLink>
+      <NavLink to="/CrudApiReducer">Reducer</NavLink>
+      <NavLink to="/AppRedux">Redux</NavLink>
+      <NavLink to="/App_RoutertContext">Router-Context</NavLink>
+      <NavLink to="/AppReducers_RouterContext">Router-Reducers-Context</NavLink>
+      <NavLink to="/AppRedux_RouterContext">Router-Redux-Context</NavLink>
     </nav>
   );
 }

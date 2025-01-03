@@ -152,12 +152,13 @@ hr {
 .active {
   font-weight: bold;
   color: #fff;
-  box-shadow: 0 0 10px #17f, 0 0 10px #17f;
-  border: 1px solid #17f;
-  padding: 0 0.3rem;
+  box-shadow: 0 0 10px #07e, 0 0 10px #07e;
+  border: 1px solid #07e;
+  padding: 0 4px;
   border-radius: 0.5rem;
   text-decoration: none;
-  background-color: #17f;
+  transition: all 0.5s ease-in-out;
+  background-color: #07e;
 }
 
 /* ********** Site Styles ********** */
@@ -170,8 +171,16 @@ hr {
 }
 
 .title-component {
+  margin: 0 auto;
+  width: fit-content;
   text-align: center;
   background-image: linear-gradient(to right, blueviolet, blueviolet, magenta);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid-1-2 {
+  margin-top: 1rem;
 }
 
 .crud-form {
@@ -246,7 +255,7 @@ hr {
         color: #fff;
       }
       &:active {
-        box-shadow: inset 2px 2px 6px #137, inset -2px -2px 6px #17f;
+        box-shadow: inset 2px 2px 6px #137, inset -2px -2px 6px #07e;
       } */
       &:active img,
       &:hover img {

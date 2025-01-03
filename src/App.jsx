@@ -7,10 +7,7 @@ const myTitle = {
 function App() {
   return (
     <>
-      <h1 style={myTitle}>APP</h1>
-      <hr />
       <Crud />
-      <hr />
     </>
   );
 }
