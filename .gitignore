@@ -25,3 +25,4 @@ dist-ssr
 
 # Ignora la carpeta específica
 src/CRUD/js-Crud
+BORRADOR.jsx
