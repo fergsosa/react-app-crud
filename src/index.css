@@ -142,6 +142,7 @@ p {
 hr {
   height: 0.25rem;
   background-image: linear-gradient(to right, blueviolet, blueviolet, magenta);
+  background-image: linear-gradient(to right, #007aff, #5ac8fa);
   border: none;
 }
 
@@ -190,7 +191,9 @@ hr {
   width: fit-content;
   text-align: center;
   background-image: linear-gradient(to right, blueviolet, blueviolet, magenta);
+  background-image: linear-gradient(to right, #007aff, #5ac8fa);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -265,15 +268,8 @@ hr {
       background-color: transparent;
       cursor: pointer;
 
-      /* &:hover {
-        box-shadow: inset 2px 2px 6px #05d, inset -2px -2px 6px #19f;
-        color: #fff;
-      }
-      &:active {
-        box-shadow: inset 2px 2px 6px #137, inset -2px -2px 6px #07e;
-      } */
-      &:active img,
-      &:hover img {
+      &:active,
+      &:hover {
         filter: opacity(0.75);
       }
     }
