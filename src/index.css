@@ -1,12 +1,9 @@
 /* ********** Custom Properties ********** */
 :root {
   --bg-nav-bar: #161617cc;
-  /* * filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px))) */
 
   --bg-dark: #121212;
   --bg-light: #e4e4e4;
-
-  --marcador: #fff5;
 
   --first-color: #18c;
   --first-alpha-color: #15a;
@@ -98,7 +95,7 @@ h2 {
 h3 {
   font-size: var(--step-20);
   margin: 0;
-  /* margin: auto; */
+  margin-bottom: 1rem;
 }
 h4 {
   font-size: var(--step-16);
@@ -243,7 +240,6 @@ hr {
 .crud-table {
   width: 100%;
   background-color: #232323;
-  margin-top: 1rem;
   border-radius: 1rem;
   overflow: hidden;
 

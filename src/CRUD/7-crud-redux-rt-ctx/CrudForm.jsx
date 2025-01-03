@@ -54,7 +54,7 @@ const CrudForm = () => {
 
   return (
     <div>
-      <h2>{dataToEdit ? "Editar" : "Agregar"}</h2>
+      <h3>{dataToEdit ? "Editar" : "Agregar"}</h3>
       <form className="crud-form" onSubmit={handleSubmit}>
         <input
           type="text"
