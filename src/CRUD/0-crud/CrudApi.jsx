@@ -10,6 +10,9 @@ export const CrudApi = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const [fadeClass, setFadeClass] = useState("");
+  useEffect(() => setFadeClass("fade-in"), []);
+
   let api = helpHttp();
   let url = "http://localhost:3000/players";
 
@@ -92,7 +95,7 @@ export const CrudApi = () => {
   };
 
   return (
-    <>
+    <div className={fadeClass}>
       <h2 className="title-component">CrudApi</h2>
       <article className="grid-1-2">
         <CrudForm
@@ -118,7 +121,7 @@ export const CrudApi = () => {
           />
         )}
       </article>
-    </>
+    </div>
   );
 };
 

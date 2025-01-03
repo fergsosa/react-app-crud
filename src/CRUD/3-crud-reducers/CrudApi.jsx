@@ -15,6 +15,9 @@ const CrudApiReducer = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const [fadeClass, setFadeClass] = useState("");
+  useEffect(() => setFadeClass("fade-in"), []);
+
   let api = helpHttp();
   let url = "http://localhost:3000/players";
 
@@ -99,7 +102,7 @@ const CrudApiReducer = () => {
   };
 
   return (
-    <>
+    <div className={fadeClass}>
       <h2 className="title-component">
         CrudApi <br /> REDUCERS
       </h2>
@@ -127,7 +130,7 @@ const CrudApiReducer = () => {
           />
         )}
       </article>
-    </>
+    </div>
   );
 };
 

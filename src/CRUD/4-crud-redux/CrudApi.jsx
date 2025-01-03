@@ -24,6 +24,9 @@ const CrudApiRedux = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const [fadeClass, setFadeClass] = useState("");
+  useEffect(() => setFadeClass("fade-in"), []);
+
   let api = helpHttp();
   let url = "http://localhost:3000/players";
 
@@ -101,7 +104,7 @@ const CrudApiRedux = () => {
     }
   };
   return (
-    <>
+    <div className={fadeClass}>
       <h2 className="title-component">
         CrudApi <br /> REDUX
       </h2>
@@ -129,7 +132,7 @@ const CrudApiRedux = () => {
           />
         )}
       </article>
-    </>
+    </div>
   );
 };
 

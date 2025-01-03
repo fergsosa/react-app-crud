@@ -4,19 +4,16 @@ import CrudTable from "./CrudTable";
 import { helpHttp } from "../helpers/helpHttp";
 import { Loader, Message } from "../components";
 import Error404 from "../pages/Error404";
-import {
-  BrowserRouter,
-  HashRouter,
-  NavLink,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 
 const CrudApiRouter = () => {
   const [db, setDb] = useState(null);
   const [dataToEdit, setDataToEdit] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const [fadeClass, setFadeClass] = useState("");
+  useEffect(() => setFadeClass("fade-in"), []);
 
   let api = helpHttp();
   let url = "http://localhost:3000/players";
@@ -99,9 +96,7 @@ const CrudApiRouter = () => {
   };
 
   return (
-    // <BrowserRouter>
-    // <HashRouter>
-    <>
+    <div className={fadeClass}>
       <h2 className="title-component">
         CrudApi <br /> ROUTER
       </h2>
@@ -159,9 +154,7 @@ const CrudApiRouter = () => {
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
-    </>
-    // </HashRouter>
-    // </BrowserRouter>
+    </div>
   );
 };
 

@@ -11,17 +11,19 @@ import { Loader, Message } from "../components";
 // readAllAction,
 // updateAction,
 // } from "./actions/crudActions";
-import { HashRouter, NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import Error404 from "../pages/Error404";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import CrudContextReduxRtCtx from "./context/CrudContext";
 
 const CrudApiReduxRtCtx = () => {
+  const [fadeClass, setFadeClass] = useState("");
+  useEffect(() => setFadeClass("fade-in"), []);
+
   const { db, loading, error } = useContext(CrudContextReduxRtCtx);
 
   return (
-    // <HashRouter>
-    <>
+    <div className={fadeClass}>
       <h2 className="title-component">
         CrudApi <br /> "REDUX-ROUTER/CONTEXT"
       </h2>
@@ -51,8 +53,7 @@ const CrudApiReduxRtCtx = () => {
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
-    </>
-    //  </HashRouter>
+    </div>
   );
 };
 

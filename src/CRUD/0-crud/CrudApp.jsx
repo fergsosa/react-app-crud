@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CrudForm from "./CrudForm";
 import CrudTable from "./CrudTable";
 
@@ -13,6 +13,9 @@ const inicialDb = [
 export const CrudApp = () => {
   const [db, setDb] = useState(inicialDb);
   const [dataToEdit, setDataToEdit] = useState(null);
+
+  const [fadeClass, setFadeClass] = useState("");
+  useEffect(() => setFadeClass("fade-in"), []);
 
   const createData = (data) => {
     data.id = Date.now();
@@ -35,7 +38,7 @@ export const CrudApp = () => {
   };
 
   return (
-    <>
+    <div className={fadeClass}>
       <h2 className="title-component">CrudApp</h2>
       <article className="grid-1-2">
         <CrudForm
@@ -50,8 +53,6 @@ export const CrudApp = () => {
           deleteData={deleteData}
         />
       </article>
-    </>
+    </div>
   );
 };
-
-// export default CrudApp;
