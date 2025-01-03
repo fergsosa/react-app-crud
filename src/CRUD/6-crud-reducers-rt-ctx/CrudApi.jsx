@@ -11,18 +11,19 @@ const CrudApiReducerRouterContext = () => {
   const { db, loading, error } = useContext(CrudContextRdRt);
 
   return (
-    <HashRouter>
+    // <HashRouter>
+    <>
       <h2 className="title-component">
         CrudApi <br /> "REDUCERS-ROUTER/CONTEXT"
       </h2>
       <div className="container">
         <nav className="nav-rutas">
-          <NavLink to="/">Jugadores</NavLink>
-          <NavLink to="/agregar">Agregar</NavLink>
+          <NavLink to="/AppReducers_RouterContext">Jugadores</NavLink>
+          <NavLink to="/AppReducers_RouterContext/agregar">Agregar</NavLink>
         </nav>
         <Routes>
           <Route
-            path="/"
+            path=""
             element={
               <>
                 {loading && <Loader />}
@@ -36,12 +37,13 @@ const CrudApiReducerRouterContext = () => {
               </>
             }
           />
-          <Route path="/agregar" element={<CrudForm />} />
-          <Route path="/edita/:id" element={<CrudForm />} />
-          <Route path="/*" element={<Error404 />} />
+          <Route path="agregar" element={<CrudForm />} />
+          <Route path="edita/:id" element={<CrudForm />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
-    </HashRouter>
+    </>
+    // </HashRouter>
   );
 };
 

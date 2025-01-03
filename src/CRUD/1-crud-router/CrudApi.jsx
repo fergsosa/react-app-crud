@@ -3,6 +3,7 @@ import CrudForm from "./CrudForm";
 import CrudTable from "./CrudTable";
 import { helpHttp } from "../helpers/helpHttp";
 import { Loader, Message } from "../components";
+import Error404 from "../pages/Error404";
 import {
   BrowserRouter,
   HashRouter,
@@ -10,7 +11,6 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import Error404 from "../pages/Error404";
 
 const CrudApiRouter = () => {
   const [db, setDb] = useState(null);
@@ -100,18 +100,19 @@ const CrudApiRouter = () => {
 
   return (
     // <BrowserRouter>
-    <HashRouter>
+    // <HashRouter>
+    <>
       <h2 className="title-component">
         CrudApi <br /> ROUTER
       </h2>
       <div className="container">
         <nav className="nav-rutas ">
-          <NavLink to="/">Jugadores</NavLink>
-          <NavLink to="/agregar">Agregar</NavLink>
+          <NavLink to="/CrudApiRouter">Jugadores</NavLink>
+          <NavLink to="/CrudApiRouter/agregar">Agregar</NavLink>
         </nav>
         <Routes>
           <Route
-            path="/"
+            path=""
             element={
               <>
                 {loading && <Loader />}
@@ -133,7 +134,7 @@ const CrudApiRouter = () => {
           />
 
           <Route
-            path="/agregar"
+            path="agregar"
             element={
               <CrudForm
                 createData={createData}
@@ -145,7 +146,7 @@ const CrudApiRouter = () => {
           />
 
           <Route
-            path="/edita/:id"
+            path="edita/:id"
             element={
               <CrudForm
                 createData={createData}
@@ -158,7 +159,8 @@ const CrudApiRouter = () => {
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
-    </HashRouter>
+    </>
+    // </HashRouter>
     // </BrowserRouter>
   );
 };

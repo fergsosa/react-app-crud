@@ -11,18 +11,19 @@ const CrudApi_RouterContext = () => {
   // console.log(db);
 
   return (
-    <HashRouter>
+    // <HashRouter>
+    <>
       <h2 className="title-component">
         CrudApi <br /> "ROUTER/CONTEXT"
       </h2>
       <div className="container">
         <nav className="nav-rutas">
-          <NavLink to="/">Jugadores</NavLink>
-          <NavLink to="/agregar">Agregar</NavLink>
+          <NavLink to="/App_RoutertContext">Jugadores</NavLink>
+          <NavLink to="/App_RoutertContext/agregar">Agregar</NavLink>
         </nav>
         <Routes>
           <Route
-            path="/"
+            path=""
             element={
               <>
                 {loading && <Loader />}
@@ -36,12 +37,13 @@ const CrudApi_RouterContext = () => {
               </>
             }
           />
-          <Route path="/agregar" element={<CrudForm />} />
-          <Route path="/editar/:id" element={<CrudForm />} />
+          <Route path="agregar" element={<CrudForm />} />
+          <Route path="editar/:id" element={<CrudForm />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
-    </HashRouter>
+    </>
+    //  </HashRouter>
   );
 };
 

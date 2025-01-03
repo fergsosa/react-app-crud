@@ -1,0 +1,12 @@
+nav {
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  a {
+    padding-right: 20px;
+    color: #fff;
+    font-family: Helvetica, sans-serif;
+  }
+}
