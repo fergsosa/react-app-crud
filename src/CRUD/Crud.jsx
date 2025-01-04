@@ -11,6 +11,7 @@ import NavBar from "./components/NavBar";
 
 const myTitle = {
   textAlign: "center",
+  webkitTextStroke: ".5px #444",
 };
 
 function Crud() {
