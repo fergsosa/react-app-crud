@@ -5,6 +5,7 @@ function NavBar() {
   return (
     <nav>
       <NavLink to="/">App</NavLink>
+      <NavLink to="/localStore">localStore</NavLink>
       <NavLink to="/crudApi">Api</NavLink>
       <NavLink to="/CrudApiRouter">Api-Router</NavLink>
       <NavLink to="/AppContext">Context</NavLink>

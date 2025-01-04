@@ -1,5 +1,5 @@
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
-import { CrudApi, CrudApp } from "./0-crud";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import { CrudApi, CrudApp_LocalStore, CrudApp } from "./0-crud";
 import CrudApiRouter from "./1-crud-router/CrudApi";
 import AppContext from "./2-crud-context/AppContext";
 import CrudApiReducer from "./3-crud-reducers/CrudApi";
@@ -23,6 +23,7 @@ function Crud() {
         <NavBar />
         <Routes>
           <Route path="/" element={<CrudApp />} />
+          <Route path="/localStore" element={<CrudApp_LocalStore />} />
           <Route path="/crudApi" element={<CrudApi />} />
           <Route path="/CrudApiRouter/*" element={<CrudApiRouter />} />
           <Route path="/AppContext" element={<AppContext />} />
