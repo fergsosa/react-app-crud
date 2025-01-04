@@ -15,7 +15,7 @@ const CrudApiReducerRouterContext = () => {
   return (
     <div className={fadeClass}>
       <h2 className="title-component">
-        CrudApi <br /> "REDUCERS-ROUTER/CONTEXT"
+        CrudApi <br /> ~REDUCERS-ROUTER/CONTEXT~
       </h2>
       <div className="container">
         <nav className="nav-rutas">

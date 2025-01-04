@@ -42,25 +42,6 @@ function Crud() {
           />
         </Routes>
       </HashRouter>
-
-      {/* <CrudApp /> 
-      <hr />
-      <CrudApi />
-      <hr />
-      <CrudApiRouter />
-      <hr />
-      <AppContext />
-      <hr />
-      <CrudApiReducer />
-      <hr />
-      <AppRedux />
-      <hr />
-      <App_RoutertContext />
-      <hr />
-      <AppReducers_RouterContext />
-      <hr />
-      <AppRedux_RouterContext />
-      <hr /> */}
     </>
   );
 }

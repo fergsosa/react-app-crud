@@ -4,8 +4,8 @@ nav {
   justify-content: center;
   padding: 1rem;
   a {
-    padding: 0 3px;
-    margin: 0 15px;
+    padding: 0 0.5rem;
+    margin: 0 0.5rem;
     color: #fff;
     font-family: Helvetica, sans-serif;
   }

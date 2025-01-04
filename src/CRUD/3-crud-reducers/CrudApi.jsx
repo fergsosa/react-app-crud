@@ -104,7 +104,7 @@ const CrudApiReducer = () => {
   return (
     <div className={fadeClass}>
       <h2 className="title-component">
-        CrudApi <br /> REDUCERS
+        CrudApi <br /> ~REDUCERS~
       </h2>
       <article className="grid-1-2">
         <CrudForm

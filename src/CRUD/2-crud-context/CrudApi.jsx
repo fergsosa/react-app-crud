@@ -14,7 +14,7 @@ const CrudApiContext = () => {
   return (
     <div className={fadeClass}>
       <h2 className="title-component">
-        CrudApi <br /> CONTEXT
+        CrudApi <br /> ~CONTEXT~
       </h2>
       <article className="grid-1-2">
         <CrudForm />

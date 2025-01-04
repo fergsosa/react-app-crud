@@ -98,7 +98,7 @@ const CrudApiRouter = () => {
   return (
     <div className={fadeClass}>
       <h2 className="title-component">
-        CrudApi <br /> ROUTER
+        CrudApi <br /> ~ROUTER~
       </h2>
       <div className="container">
         <nav className="nav-rutas ">

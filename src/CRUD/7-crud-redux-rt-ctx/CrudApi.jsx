@@ -25,7 +25,7 @@ const CrudApiReduxRtCtx = () => {
   return (
     <div className={fadeClass}>
       <h2 className="title-component">
-        CrudApi <br /> "REDUX-ROUTER/CONTEXT"
+        CrudApi <br /> ~REDUX-ROUTER/CONTEXT~
       </h2>
       <div className="container">
         <nav className="nav-rutas">
