@@ -47,8 +47,6 @@ export const helpHttp = () => {
   return { get, post, put, del };
 };
 
-//* video: https://www.youtube.com/watch?v=miUHXjmhTEQ&list=PLvq-jIkSeTUZ5XcUw8fJPTBKEHEKPMTKk&index=38
-
 //* Optimizado
 export const helpHttpOptimizado = () => {
   const customFetch = async (endpoint, options = {}) => {
@@ -76,7 +74,7 @@ export const helpHttpOptimizado = () => {
       return await response.json();
     } catch (error) {
       return error;
-    } finally {
+      // } finally {
       // Limpieza: en caso de que desee realizar alguna acción después de completar la recuperación
     }
   };
