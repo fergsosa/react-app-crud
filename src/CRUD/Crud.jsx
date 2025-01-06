@@ -12,13 +12,14 @@ import NavBar from "./components/NavBar";
 const myTitle = {
   textAlign: "center",
   webkitTextStroke: ".5px #444",
+  backgroundImage: "linear-gradient(to right, #007aff, #5ac8fa)",
 };
 
 function Crud() {
   return (
     <>
       <h1 style={myTitle}>CRUD</h1>
-      <hr />
+      {/* <hr /> */}
 
       <HashRouter>
         <NavBar />
@@ -26,20 +27,17 @@ function Crud() {
           <Route path="/" element={<CrudApp />} />
           <Route path="/localStore" element={<CrudApp_LocalStore />} />
           <Route path="/crudApi" element={<CrudApi />} />
-          <Route path="/CrudApiRouter/*" element={<CrudApiRouter />} />
+          <Route path="/ApiRouter/*" element={<CrudApiRouter />} />
           <Route path="/AppContext" element={<AppContext />} />
-          <Route path="/CrudApiReducer" element={<CrudApiReducer />} />
+          <Route path="/ApiReducer" element={<CrudApiReducer />} />
           <Route path="/AppRedux" element={<AppRedux />} />
+          <Route path="/RoutertContext/*" element={<App_RoutertContext />} />
           <Route
-            path="/App_RoutertContext/*"
-            element={<App_RoutertContext />}
-          />
-          <Route
-            path="/AppReducers_RouterContext/*"
+            path="/Reducers_RouterContext/*"
             element={<AppReducers_RouterContext />}
           />
           <Route
-            path="/AppRedux_RouterContext/*"
+            path="/Redux_RouterContext/*"
             element={<AppRedux_RouterContext />}
           />
         </Routes>
