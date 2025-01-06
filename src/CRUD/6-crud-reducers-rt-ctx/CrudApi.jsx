@@ -19,8 +19,8 @@ const CrudApiReducerRouterContext = () => {
       </h2>
       <div className="container">
         <nav className="nav-rutas">
-          <NavLink to="/AppReducers_RouterContext">Jugadores</NavLink>
-          <NavLink to="/AppReducers_RouterContext/agregar">Agregar</NavLink>
+          <NavLink to="/Reducers_RouterContext">Jugadores</NavLink>
+          <NavLink to="/Reducers_RouterContext/agregar">Agregar</NavLink>
         </nav>
         <Routes>
           <Route

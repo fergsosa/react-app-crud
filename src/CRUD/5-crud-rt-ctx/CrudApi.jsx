@@ -21,8 +21,8 @@ const CrudApi_RouterContext = () => {
       </h2>
       <div className="container">
         <nav className="nav-rutas">
-          <NavLink to="/App_RoutertContext">Jugadores</NavLink>
-          <NavLink to="/App_RoutertContext/agregar">Agregar</NavLink>
+          <NavLink to="/RoutertContext">Jugadores</NavLink>
+          <NavLink to="/RoutertContext/agregar">Agregar</NavLink>
         </nav>
         <Routes>
           <Route

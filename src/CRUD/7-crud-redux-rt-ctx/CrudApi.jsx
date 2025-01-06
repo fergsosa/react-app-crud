@@ -29,8 +29,8 @@ const CrudApiReduxRtCtx = () => {
       </h2>
       <div className="container">
         <nav className="nav-rutas">
-          <NavLink to="/AppRedux_RouterContext">Jugadores</NavLink>
-          <NavLink to="/AppRedux_RouterContext/agregar">Agregar</NavLink>
+          <NavLink to="/Redux_RouterContext">Jugadores</NavLink>
+          <NavLink to="/Redux_RouterContext/agregar">Agregar</NavLink>
         </nav>
         <Routes>
           <Route

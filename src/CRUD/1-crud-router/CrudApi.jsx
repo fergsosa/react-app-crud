@@ -102,8 +102,8 @@ const CrudApiRouter = () => {
       </h2>
       <div className="container">
         <nav className="nav-rutas ">
-          <NavLink to="/CrudApiRouter">Jugadores</NavLink>
-          <NavLink to="/CrudApiRouter/agregar">Agregar</NavLink>
+          <NavLink to="/ApiRouter">Jugadores</NavLink>
+          <NavLink to="/ApiRouter/agregar">Agregar</NavLink>
         </nav>
         <Routes>
           <Route
