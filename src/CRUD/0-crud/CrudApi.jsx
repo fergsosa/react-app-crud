@@ -124,5 +124,3 @@ export const CrudApi = () => {
     </div>
   );
 };
-
-// export default CrudApi;

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 const initialForm = {
   player: "",
   team: "",
+  nro: "",
+  tiempo: "",
   id: null,
 };
 
@@ -21,7 +23,14 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
       ...form,
       [e.target.name]: e.target.value,
     });
-    // console.log({ [e.target.name]: e.target.value });
+    // Condicional para el select
+    if (e.target.id === "tiempo") {
+      setForm({
+        ...form,
+        tiempo: e.target.value,
+      });
+    }
+    console.log({ [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -61,6 +70,29 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           onChange={handleChange}
           value={form.team}
         />
+        <label htmlFor="nro">Número</label>
+        <input
+          id="nro"
+          type="number"
+          name="nro"
+          placeholder="Número"
+          onChange={handleChange}
+          value={form.nro}
+        />
+        <div class="box">
+          <label htmlFor="tiempo">Tiempo</label>
+          <select
+            id="tiempo"
+            name="tiempo" // Agregamos el atributo name
+            onChange={handleChange}
+          >
+            <option value="---">---</option>
+            <option value="1 mes">1 mes</option>
+            <option value="3 meses">3 meses</option>
+            <option value="5 meses">5 meses</option>
+          </select>
+        </div>
+
         <input type="submit" value="enviar" />
         <input type="reset" value="Limpiar" onClick={handleReset} />
       </form>

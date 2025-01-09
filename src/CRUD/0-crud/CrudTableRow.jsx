@@ -1,15 +1,15 @@
 import React from "react";
 import imgEdit from "../img/edit.svg";
 import imgDelete from "../img/delete.svg";
-// import imgEdit2 from "/image/edit.svg";
-// import imgDelete2 from "/image/delete.svg";
 
 const CrudTableRow = ({ dt, setDataToEdit, deleteData }) => {
-  let { player, team, id } = dt;
+  let { player, team, id, nro, tiempo } = dt;
   return (
     <tr>
       <td>{player}</td>
       <td>{team}</td>
+      <td>{nro}</td>
+      <td>{tiempo}</td>
       <td>
         <button className="btn-edit" onClick={() => setDataToEdit(dt)}>
           <img src={imgEdit} alt="editar" />
