@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 const initialForm = {
+  id: null,
   player: "",
   team: "",
   nro: "",
   tiempo: "",
   aceptoTerminos: false,
-  id: null,
 };
 
 const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
@@ -53,7 +53,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   };
 
   return (
-    <div>
+    <div className="form">
       <h3>{dataToEdit ? "Editar" : "Agregar"}</h3>
       <form className="crud-form" onSubmit={handleSubmit}>
         <input
