@@ -359,7 +359,7 @@ hr {
     &:not(:checked)::before {
       border-color: #fff;
       transform: rotate(45deg) scale(0);
-      animation: uncheckAnim 0.2s ease;
+      animation: uncheckAnim 0.2s ease-out;
     }
   }
 }
