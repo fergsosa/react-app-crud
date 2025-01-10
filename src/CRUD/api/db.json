@@ -3,39 +3,66 @@
     {
       "id": 0,
       "player": "Messi",
-      "team": "Barcelona"
+      "team": "Barcelona",
+      "nro": "10",
+      "tiempo": "1 mes",
+      "aceptoTerminos": true
     },
     {
       "id": 1,
       "player": "Di María",
-      "team": "Real Madrid"
+      "team": "Real Madrid",
+      "nro": "22",
+      "tiempo": "1 mes",
+      "aceptoTerminos": true
     },
     {
       "id": 3,
       "player": "Ronaldo",
-      "team": "Real Madrid"
+      "team": "Real Madrid",
+      "nro": "7",
+      "tiempo": "1 mes",
+      "aceptoTerminos": true
     },
     {
       "id": 4,
       "player": "Maradona",
-      "team": "Napoli"
+      "team": "Napoli",
+      "nro": "10",
+      "tiempo": "1 mes",
+      "aceptoTerminos": false
     },
     {
       "id": 5,
       "player": "Di Stéfano",
-      "team": "Real Madrid"
+      "team": "Real Madrid",
+      "nro": "9",
+      "tiempo": "1 mes",
+      "aceptoTerminos": false
     },
     {
       "id": 6,
       "player": "Chino Zelarayan",
-      "team": "Belgrano"
+      "team": "Belgrano",
+      "nro": "10",
+      "tiempo": "1 mes",
+      "aceptoTerminos": true
     },
     {
       "player": "BBB",
       "team": "bbb",
       "nro": "15",
-      "tiempo": "5 meses",
-      "id": 1736434636257
+      "tiempo": "1 mes",
+      "id": 1736434636257,
+      "aceptoTerminos": false
+    },
+    {
+      "player": "AAA",
+      "team": "aaa",
+      "nro": "10",
+      "tiempo": "3 meses",
+      "aceptoTerminos": false,
+      "id": 1736436489384
     }
   ]
 }
