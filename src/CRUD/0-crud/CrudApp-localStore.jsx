@@ -3,11 +3,48 @@ import CrudForm from "./CrudForm";
 import CrudTable from "./CrudTable";
 
 const inicialDb = [
-  { id: 0, player: "Messi", team: "Barcelona" },
-  { id: 1, player: "Di María", team: "Real Madrid" },
-  { id: 3, player: "Ronaldo", team: "Real Madrid" },
-  { id: 4, player: "Maradona", team: "Napoli" },
-  { id: 5, player: "Di Stéfano", team: "Real Madrid" },
+  {
+    id: 0,
+    player: "Messi",
+    team: "Barcelona",
+    nro: "10",
+    tiempo: "1 mes",
+    aceptoTerminos: true,
+  },
+  {
+    id: 1,
+    player: "Di María",
+    team: "Real Madrid",
+    nro: "22",
+    tiempo: "1 mes",
+    aceptoTerminos: true,
+  },
+  {
+    id: 3,
+    player: "Ronaldo",
+    team: "Real Madrid",
+    nro: "7",
+    tiempo: "1 mes",
+    aceptoTerminos: true,
+  },
+  {
+    id: 4,
+    player: "Maradona",
+    team: "Napoli",
+    nro: "10",
+    tiempo: "1 mes",
+    aceptoTerminos: false,
+  },
+  {
+    id: 5,
+    player: "Di Stéfano",
+    team: "Real Madrid",
+    nro: "9",
+    tiempo: "1 mes",
+    aceptoTerminos: false,
+  },
+
+  ,
 ];
 
 export const CrudApp_LocalStore = () => {
