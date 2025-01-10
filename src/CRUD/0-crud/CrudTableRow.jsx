@@ -3,12 +3,13 @@ import imgEdit from "../img/edit.svg";
 import imgDelete from "../img/delete.svg";
 
 const CrudTableRow = ({ dt, setDataToEdit, deleteData }) => {
-  let { player, team, id, nro, tiempo } = dt;
+  let { player, team, id, nro, tiempo, aceptoTerminos } = dt;
   return (
     <tr>
       <td>{player}</td>
       <td>{team}</td>
       <td>{nro}</td>
+      <td>{aceptoTerminos ? "✅" : "❌"}</td>
       <td>{tiempo}</td>
       <td>
         <button className="btn-edit" onClick={() => setDataToEdit(dt)}>

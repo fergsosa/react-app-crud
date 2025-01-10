@@ -5,6 +5,7 @@ const initialForm = {
   team: "",
   nro: "",
   tiempo: "",
+  aceptoTerminos: false,
   id: null,
 };
 
@@ -23,14 +24,13 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
       ...form,
       [e.target.name]: e.target.value,
     });
-    // Condicional para el select
-    if (e.target.id === "tiempo") {
-      setForm({
-        ...form,
-        tiempo: e.target.value,
-      });
-    }
-    console.log({ [e.target.name]: e.target.value });
+    // console.log({ [e.target.name]: e.target.value });
+  };
+  const handleChecked = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.checked,
+    });
   };
 
   const handleSubmit = (e) => {
@@ -70,27 +70,40 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           onChange={handleChange}
           value={form.team}
         />
-        <label htmlFor="nro">Número</label>
+        <label htmlFor="label-nro">Número de Remera</label>
         <input
-          id="nro"
+          id="label-nro"
           type="number"
           name="nro"
-          placeholder="Número"
+          min="0"
+          max="100"
+          placeholder="0"
           onChange={handleChange}
           value={form.nro}
         />
         <div class="box">
-          <label htmlFor="tiempo">Tiempo</label>
+          <label htmlFor="label-tiempo">Tiempo</label>
           <select
-            id="tiempo"
-            name="tiempo" // Agregamos el atributo name
+            id="label-tiempo"
+            name="tiempo"
             onChange={handleChange}
+            defaultValue=" "
           >
-            <option value="---">---</option>
+            <option value="">---</option>
             <option value="1 mes">1 mes</option>
             <option value="3 meses">3 meses</option>
             <option value="5 meses">5 meses</option>
           </select>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="aceptoTerminos"
+            id="label-aceptoTerminos"
+            checked={form.aceptoTerminos} // Para marcarlo si ya está seleccionado
+            onChange={handleChecked}
+          />
+          <label htmlFor="label-aceptoTerminos">Juega actualmente</label>
         </div>
 
         <input type="submit" value="enviar" />

@@ -214,6 +214,36 @@ hr {
     color: #fff;
   }
 
+  input[type="number"] {
+    width: 50px;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: thin solid #dedede;
+    padding: 0.75rem;
+    margin: 0 1rem 1rem;
+    outline: none;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+    font-family: "Inter";
+    resize: none;
+    color: #fff;
+    text-align: center;
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+    }
+    &:hover::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+  }
+
   input[type="submit"],
   input[type="reset"] {
     display: inline-block;
@@ -273,6 +303,14 @@ hr {
     }
     &:last-child {
       border-radius: 1rem;
+    }
+  }
+  td {
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      /* background-color: red; */
+      text-align: center;
     }
   }
 }
