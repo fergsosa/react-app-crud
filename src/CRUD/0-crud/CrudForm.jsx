@@ -81,21 +81,21 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           onChange={handleChange}
           value={form.nro}
         />
-        <div class="box">
-          <label htmlFor="label-tiempo">Tiempo</label>
+        <div className="select">
+          {/* <label htmlFor="label-tiempo">Tiempo</label> */}
           <select
             id="label-tiempo"
             name="tiempo"
             onChange={handleChange}
             defaultValue=" "
           >
-            <option value="">---</option>
+            <option value="">Tiempo</option>
             <option value="1 mes">1 mes</option>
             <option value="3 meses">3 meses</option>
             <option value="5 meses">5 meses</option>
           </select>
         </div>
-        <div>
+        <div className="checkbox">
           <input
             type="checkbox"
             name="aceptoTerminos"
