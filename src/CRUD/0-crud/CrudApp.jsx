@@ -43,8 +43,6 @@ const inicialDb = [
     tiempo: "1 mes",
     aceptoTerminos: false,
   },
-
-  ,
 ];
 
 export const CrudApp = () => {
