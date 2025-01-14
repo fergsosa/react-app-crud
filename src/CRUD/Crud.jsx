@@ -12,6 +12,7 @@ import NavBar from "./components/NavBar";
 const myTitle = {
   textAlign: "center",
   webkitTextStroke: ".5px #444",
+  borderRadius: "10px",
   backgroundImage: "linear-gradient(to right, #007aff, #5ac8fa)",
 };
 

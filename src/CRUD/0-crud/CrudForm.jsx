@@ -56,31 +56,43 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
     <div className="form">
       <h3>{dataToEdit ? "Editar" : "Agregar"}</h3>
       <form className="crud-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="player"
-          placeholder="Nombre jugador"
-          onChange={handleChange}
-          value={form.player}
-        />
-        <input
-          type="text"
-          name="team"
-          placeholder="Equipo de futbol"
-          onChange={handleChange}
-          value={form.team}
-        />
-        <label htmlFor="label-nro">Número de Remera</label>
-        <input
-          id="label-nro"
-          type="number"
-          name="nro"
-          min="0"
-          max="100"
-          placeholder="0"
-          onChange={handleChange}
-          value={form.nro}
-        />
+        <div className="form-inputs">
+          <label>
+            <input
+              type="text"
+              name="player"
+              placeholder=" "
+              onChange={handleChange}
+              value={form.player}
+            />
+            <span>Nombre jugador</span>
+          </label>
+        </div>
+        <div className="form-inputs">
+          <label>
+            <input
+              type="text"
+              name="team"
+              placeholder=""
+              onChange={handleChange}
+              value={form.team}
+            />
+            <span>Equipo de futbol</span>
+          </label>
+        </div>
+        <div>
+          <label htmlFor="label-nro">Número de Remera</label>
+          <input
+            id="label-nro"
+            type="number"
+            name="nro"
+            min="0"
+            max="100"
+            placeholder="0"
+            onChange={handleChange}
+            value={form.nro}
+          />
+        </div>
         <div className="select">
           {/* <label htmlFor="label-tiempo">Tiempo</label> */}
           <select
@@ -106,8 +118,10 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           <label htmlFor="label-aceptoTerminos">Juega actualmente</label>
         </div>
 
-        <input type="submit" value="enviar" />
-        <input type="reset" value="Limpiar" onClick={handleReset} />
+        <div className="btn-inputs">
+          <input type="submit" value="enviar" />
+          <input type="reset" value="Limpiar" onClick={handleReset} />
+        </div>
       </form>
     </div>
   );
