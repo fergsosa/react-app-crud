@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const initialForm = {
+  id: null,
   player: "",
   team: "",
-  id: null,
+  nro: "",
+  tiempo: "",
+  aceptoTerminos: false,
 };
 
 const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
@@ -25,6 +28,12 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
     });
     // console.log({ [e.target.name]: e.target.value });
   };
+  const handleChecked = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.checked,
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,29 +52,78 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   const handleReset = () => {
     setForm(initialForm);
     setDataToEdit(null);
-    navigate("/");
+    navigate("/ApiRouter/");
   };
 
   return (
-    <div>
+    <div className="form">
       <h3>{dataToEdit ? "Editar" : "Agregar"}</h3>
       <form className="crud-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="player"
-          placeholder="Nombre jugador"
-          onChange={handleChange}
-          value={form.player}
-        />
-        <input
-          type="text"
-          name="team"
-          placeholder="Equipo de futbol"
-          onChange={handleChange}
-          value={form.team}
-        />
-        <input type="submit" value="enviar" />
-        <input type="reset" value="Limpiar" onClick={handleReset} />
+        <div className="form-inputs">
+          <label>
+            <input
+              type="text"
+              name="player"
+              placeholder=" "
+              onChange={handleChange}
+              value={form.player}
+            />
+            <span>Nombre jugador</span>
+          </label>
+        </div>
+        <div className="form-inputs">
+          <label>
+            <input
+              type="text"
+              name="team"
+              placeholder=""
+              onChange={handleChange}
+              value={form.team}
+            />
+            <span>Equipo de futbol</span>
+          </label>
+        </div>
+        <div>
+          <label htmlFor="label-nro">Número de Remera</label>
+          <input
+            id="label-nro"
+            type="number"
+            name="nro"
+            min="0"
+            max="100"
+            placeholder="0"
+            onChange={handleChange}
+            value={form.nro}
+          />
+        </div>
+        <div className="select">
+          {/* <label htmlFor="label-tiempo">Tiempo</label> */}
+          <select
+            id="label-tiempo"
+            name="tiempo"
+            onChange={handleChange}
+            defaultValue=" "
+          >
+            <option value="">Tiempo</option>
+            <option value="1 mes">1 mes</option>
+            <option value="3 meses">3 meses</option>
+            <option value="5 meses">5 meses</option>
+          </select>
+        </div>
+        <div className="checkbox">
+          <input
+            type="checkbox"
+            name="aceptoTerminos"
+            id="label-aceptoTerminos"
+            checked={form.aceptoTerminos} // Para marcarlo si ya está seleccionado
+            onChange={handleChecked}
+          />
+          <label htmlFor="label-aceptoTerminos">Juega actualmente</label>
+        </div>
+        <div className="btn-inputs">
+          <input type="submit" value="enviar" />
+          <input type="reset" value="Limpiar" onClick={handleReset} />
+        </div>
       </form>
     </div>
   );

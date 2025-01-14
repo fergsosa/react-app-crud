@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import imgDelete from "../img/delete.svg";
 import imgEdit from "../img/edit.svg";
@@ -9,7 +8,7 @@ const CrudTableRow = ({ dt, setDataToEdit, deleteData }) => {
 
   const handleEdit = () => {
     setDataToEdit(dt);
-    navigate("/agregar");
+    navigate("/ApiRouter/agregar");
   };
   return (
     <tr>
