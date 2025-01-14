@@ -24,7 +24,7 @@ const CrudTableRow = ({ dt }) => {
       <td>{aceptoTerminos ? "✅" : "❌"}</td>
       <td>{tiempo}</td>
       <td>
-        <button className="btn-edit" onClick={() => setDataToEdit(dt)}>
+        <button className="btn-edit" onClick={handleEdit}>
           <img src={imgEdit} alt="editar" />
         </button>
         <button onClick={() => deleteData(id)}>

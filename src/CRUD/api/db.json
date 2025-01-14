@@ -59,9 +59,9 @@
     {
       "player": "AAA",
       "team": "aaa",
-      "nro": "10",
-      "tiempo": "3 meses",
-      "aceptoTerminos": false,
+      "nro": "8",
+      "tiempo": "1 mes",
+      "aceptoTerminos": true,
       "id": 1736436489384
     }
   ]

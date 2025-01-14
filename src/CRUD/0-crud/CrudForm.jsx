@@ -117,7 +117,6 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           />
           <label htmlFor="label-aceptoTerminos">Juega actualmente</label>
         </div>
-
         <div className="btn-inputs">
           <input type="submit" value="enviar" />
           <input type="reset" value="Limpiar" onClick={handleReset} />
