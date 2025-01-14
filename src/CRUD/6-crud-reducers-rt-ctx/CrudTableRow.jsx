@@ -13,7 +13,7 @@ const CrudTableRow = ({ dt }) => {
 
   const handleEdit = () => {
     setDataToEdit(dt);
-    navigate("/agregar");
+    navigate("/Reducers_RouterContext/agregar");
   };
 
   return (
