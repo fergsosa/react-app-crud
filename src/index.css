@@ -205,7 +205,6 @@ hr {
 .crud-form {
   margin-bottom: 1rem;
 
-  /* text----------------- */
   .form-inputs {
     margin: 2rem 0 1.5rem;
     display: grid;
@@ -237,7 +236,6 @@ hr {
       }
       input {
         font-family: inherit;
-        text-transform: capitalize;
         grid-area: input;
         /* width: 100%; */
         border-radius: 10px;

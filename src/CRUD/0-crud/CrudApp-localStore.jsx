@@ -50,6 +50,7 @@ const inicialDb = [
 export const CrudApp_LocalStore = () => {
   const [db, setDb] = useState(inicialDb);
   const [dataToEdit, setDataToEdit] = useState(null);
+
   const [fadeClass, setFadeClass] = useState("");
 
   useEffect(() => {
