@@ -7,7 +7,7 @@ import imgEdit from "../img/edit.svg";
 const CrudTableRow = ({ dt }) => {
   const { setDataToEdit, deleteData } = useContext(CrudContextReduxRtCtx);
 
-  let { player, team, id } = dt;
+  let { player, team, id, nro, tiempo, aceptoTerminos } = dt;
 
   let navitate = useNavigate();
 
@@ -19,9 +19,12 @@ const CrudTableRow = ({ dt }) => {
     <tr>
       <td>{player}</td>
       <td>{team}</td>
+      <td>{nro}</td>
+      <td>{aceptoTerminos ? "✅" : "❌"}</td>
+      <td>{tiempo}</td>
       <td>
-        <button onClick={handleEdit}>
-          <img src={imgEdit} alt="Editar" />
+        <button className="btn-edit" onClick={() => setDataToEdit(dt)}>
+          <img src={imgEdit} alt="editar" />
         </button>
         <button onClick={() => deleteData(id)}>
           <img src={imgDelete} alt="Borrar" />

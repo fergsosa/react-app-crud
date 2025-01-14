@@ -1,9 +1,9 @@
-import React from "react";
 import imgEdit from "../img/edit.svg";
 import imgDelete from "../img/delete.svg";
 
 const CrudTableRow = ({ dt, setDataToEdit, deleteData }) => {
   let { player, team, id, nro, tiempo, aceptoTerminos } = dt;
+
   return (
     <tr>
       <td>{player}</td>
