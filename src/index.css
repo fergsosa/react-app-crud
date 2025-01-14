@@ -318,7 +318,6 @@ hr {
       user-select: none;
     }
   }
-  /* Select----------------- */
   .select {
     position: relative;
     display: flex;
@@ -370,12 +369,16 @@ hr {
       }
     }
   }
-  /* checkbox----------------- */
   .checkbox {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
+
+    label {
+      user-select: none;
+      cursor: pointer;
+    }
 
     input[type="checkbox"] {
       position: relative;
