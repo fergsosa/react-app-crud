@@ -8,19 +8,24 @@ import App_RoutertContext from "./5-crud-rt-ctx/AppRtCtx";
 import AppReducers_RouterContext from "./6-crud-reducers-rt-ctx/AppReducersTtCtx";
 import AppRedux_RouterContext from "./7-crud-redux-rt-ctx/AppRedux";
 import NavBar from "./components/NavBar";
+import { ThemeSwitcherDOS } from "./components/ThemeSwitcher-2";
 
-const myTitle = {
-  textAlign: "center",
-  webkitTextStroke: ".5px #444",
+const myDiv = {
   borderRadius: "10px",
   backgroundImage: "linear-gradient(to right, #007aff, #5ac8fa)",
+  textAlign: "center",
+};
+const myTitle = {
+  webkitTextStroke: ".5px #444",
 };
 
 function Crud() {
   return (
     <>
-      <h1 style={myTitle}>CRUD</h1>
-      {/* <hr /> */}
+      <div style={myDiv}>
+        <h1 style={myTitle}>CRUD</h1>
+        <ThemeSwitcherDOS />
+      </div>
 
       <HashRouter>
         <NavBar />

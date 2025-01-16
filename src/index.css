@@ -1,147 +1,12 @@
-/* ********** Custom Properties ********** */
-:root {
-  --bg-nav-bar: #161617cc;
+@import "./base-styles.css";
 
-  --bg-dark: #121212;
-  --bg-light: #e4e4e4;
-
-  --first-color: #18c;
-  --first-alpha-color: #15a;
-  --second-color: #ff0;
-  --second-alpha-color: #990;
-  --third-color: #f00;
-  --third-alpha-color: #a00;
-
-  --white-alpha-color: #fff8;
-  --black-alpha-color: #0008;
-
-  --link-color: #2997ff;
-  --title: #333;
-  --title-dark: #ddd;
-  --text: #222;
-  --text-dark: #eee;
-
-  --font-first: "Inter", "Helvetica", "sans-serif";
-  --font-second: "Helvetica";
-
-  --btn-first: #18f;
-
-  --max-width: 1024px;
-  --header-height: 4rem;
-
-  --step-64: clamp(3.875rem, 3.8295rem + 0.2273vw, 4rem);
-  --step-54: clamp(3.25rem, 3.1875rem + 0.3125vw, 3.375rem);
-  --step-48: clamp(2.875rem, 2.8295rem + 0.2273vw, 3rem);
-  --step-44: clamp(2.625rem, 2.5625rem + 0.3125vw, 2.75rem);
-  --step-36: clamp(2.125rem, 2.0625rem + 0.3125vw, 2.25rem);
-  --step-32: clamp(1.875rem, 1.8295rem + 0.2273vw, 2rem);
-  --step-24: clamp(1.375rem, 1.3125rem + 0.3125vw, 1.5rem);
-  --step-20: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.25rem);
-  --step-16: clamp(0.875rem, 0.8125rem + 0.3125vw, 1rem);
-  --step-13: clamp(0.6875rem, 0.625rem + 0.3125vw, 0.8125rem);
-  --step-12: clamp(0.625rem, 0.5795rem + 0.2273vw, 0.75rem);
-  --step-11: clamp(0.5625rem, 0.5rem + 0.3125vw, 0.6875rem);
-  --step-9: clamp(0.4375rem, 0.392rem + 0.2273vw, 0.5625rem);
-  --step-8: clamp(0.375rem, 0.3295rem + 0.2273vw, 0.5rem);
-  --step-4: clamp(0.125rem, 0.0795rem + 0.2273vw, 0.25rem);
-}
-
-/* ********** Reset ********** */
-html {
-  box-sizing: border-box;
-  font-family: var(--font-first);
-  scroll-behavior: smooth;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: var(--font-first);
-  color: var(--text-dark);
-  background-color: var(--bg-dark);
-  margin: 0;
-  padding: 1rem;
-  overflow-x: hidden;
-}
-
-a {
-  max-width: max-content;
-  text-decoration: none;
-  transition: all 0.5s ease-out;
-  color: var(--link-color);
-
-  &:hover {
-    opacity: 0.75;
-  }
-}
-
-figure {
-  margin: 0;
-}
-h1 {
-  font-size: var(--step-44);
-  margin: 0;
-}
-h2 {
-  font-size: var(--step-32);
-  margin: 0;
-}
-
-h3 {
-  font-size: var(--step-20);
-  margin: 0;
-  margin-bottom: 1rem;
-}
-h4 {
-  font-size: var(--step-16);
-  margin: 0;
-}
-h5 {
-  font-size: var(--step-13);
-  font-weight: 500;
-  margin: 0;
-}
-h6 {
-  font-size: var(--step-13);
-  font-weight: 500;
-  margin: 0;
-}
-
-ul {
-  padding-left: 0;
-  margin: 0;
-}
-li {
-  font-size: var(--step-13);
-  line-height: var(--step-16);
-  letter-spacing: 0.05rem;
-  /* list-style: none; */
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-p {
-  font-size: var(--step-13);
-  line-height: var(--step-16);
-  letter-spacing: 0.05rem;
-  margin: 0;
-}
-
+/* ********** Components ********** */
 hr {
   height: 0.25rem;
   background-image: linear-gradient(to right, blueviolet, blueviolet, magenta);
   background-image: linear-gradient(to right, #007aff, #5ac8fa);
   border: none;
 }
-
-/* ********** Components ********** */
 
 /* ********** Utilities ********** */
 
@@ -174,9 +39,9 @@ hr {
 /* ********** Site Styles ********** */
 
 .nav-rutas {
-  margin: 1rem;
+  margin: var(--step-16);
   a {
-    margin-right: 1rem;
+    margin-right: var(--step-16);
   }
 }
 
@@ -192,25 +57,31 @@ hr {
 }
 
 .grid-1-2 {
-  margin-top: 1rem;
+  margin-top: var(--step-16);
 }
 
 .form {
-  border: 1px solid #000;
-  padding: 1rem;
+  border: 1px solid var(--form-border);
+  padding: var(--step-16);
   border-radius: 20px;
-  background-color: #222;
+  background-color: var(--form-bg);
+  margin-bottom: var(--step-16);
+  transition: border-color 0.5s ease-in-out;
+  &:active,
+  &:hover {
+    border-color: var(--inputs-border);
+  }
 }
 
 .crud-form {
-  margin-bottom: 1rem;
+  margin-bottom: var(--step-16);
 
   .form-inputs {
     margin: 2rem 0 1.5rem;
     display: grid;
     gap: 1.5rem;
-    color: #888;
-    background-color: #222;
+    color: var(--inputs-text);
+    border-radius: 10px;
 
     label {
       width: 100%;
@@ -222,7 +93,7 @@ hr {
         z-index: 1;
         width: max-content;
         height: 100%;
-        margin-left: 1rem;
+        margin-left: var(--step-16);
         padding: 0 0.5rem;
         display: flex;
         align-items: center;
@@ -241,8 +112,8 @@ hr {
         border-radius: 10px;
         border: 0.5px solid #666;
         padding: 0.7rem 1.5rem;
-        background-color: #222;
-        color: #f5f5f7;
+        background-color: var(--form-bg);
+        color: var(--text-color);
 
         &:focus-visible {
           outline: none;
@@ -252,9 +123,8 @@ hr {
         /* &:is(:focus, :not(:placeholder-shown)) + .form_text {  */
         &:focus + span,
         &:not(:placeholder-shown) + span {
-          background-color: #222;
-          color: #09e;
-          color: #f5f5f7;
+          background-color: var(--form-bg);
+          color: var(--text-color);
           transform: translateY(-50%) scale(0.7);
         }
       }
@@ -265,16 +135,17 @@ hr {
     width: 50px;
     padding: 0.75rem;
     border-radius: 10px;
-    border: thin solid #666;
+    border: thin solid var(--inputs-border);
     padding: 0.75rem;
     margin: 0 1rem 1rem;
     outline: none;
-    font-size: 1rem;
+    font-size: var(--step-16);
     line-height: 1;
     background-color: transparent;
     font-family: "Inter";
     resize: none;
-    color: #fff;
+    /* color: #fff; */
+    color: inherit;
     text-align: center;
     -moz-appearance: textfield;
     appearance: textfield;
@@ -301,7 +172,7 @@ hr {
     input[type="reset"] {
       display: inline-block;
       font-family: "Inter";
-      font-size: 1rem;
+      font-size: var(--step-16);
       font-weight: 600;
       line-height: 1;
       vertical-align: middle;
@@ -322,10 +193,9 @@ hr {
     width: 20em;
     height: 3em;
     line-height: 3;
-    background-color: #5c6664;
     overflow: hidden;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: var(--step-16);
 
     &::after {
       content: "\25BC";
@@ -333,7 +203,8 @@ hr {
       top: 0;
       right: 0;
       padding: 0 1em;
-      background: #666;
+      background-color: var(--inputs-border);
+      color: #fff;
       cursor: pointer;
       pointer-events: none;
       transition: 0.25s background-color ease;
@@ -350,16 +221,15 @@ hr {
       -ms-appearance: none;
       appearance: none;
       outline: 0;
-      border: 0.5px solid #666;
+      border: 0.5px solid var(--inputs-border);
       border-radius: 10px;
-      background: #272727;
-      background-image: none;
+      background: var(--form-bg);
       flex: 1;
       padding: 0 0.5em;
-      color: #fff;
+      color: var(--text-color);
       cursor: pointer;
       font-size: 1em;
-      font-family: "Inter", sans-serif;
+      font-family: inherit;
 
       &:active,
       &:hover {
@@ -371,7 +241,7 @@ hr {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--step-16);
 
     label {
       user-select: none;
@@ -384,11 +254,14 @@ hr {
       /* height: 28px; */
       width: 20px;
       height: 20px;
-      background-color: #272727;
+      background-color: var(--bg-color);
       border-radius: 0.25rem;
       border: 0.5px solid #666;
       appearance: none;
       cursor: pointer;
+      &:hover {
+        border: 0.5px solid #07e;
+      }
 
       &:checked {
         background-color: #07e;
@@ -434,19 +307,20 @@ hr {
 
 /* ----------------- */
 .crud-table {
+  border: 1px solid var(--form-border);
   width: 100%;
-  background-color: #232323;
-  border-radius: 1rem;
+  background-color: var(--table-bg);
+  border-radius: var(--step-16);
   overflow: hidden;
+  color: var(--text-color);
 
   th {
-    border-bottom: thin solid #444;
-    color: #fff;
+    border-bottom: thin solid var(--th-border);
   }
   th,
   td {
     padding: 0.2rem 0.5rem;
-    border-right: thin solid #151517;
+    border-right: thin solid var(--td-border);
 
     &:last-child {
       width: 90px;
@@ -462,16 +336,17 @@ hr {
 
       &:active,
       &:hover {
-        filter: opacity(0.75);
+        opacity: 1;
+        filter: brightness(0.75);
       }
     }
   }
   tr {
     &:nth-child(even) {
-      background-color: #333;
+      background-color: var(--tr-even);
     }
     &:last-child {
-      border-radius: 1rem;
+      border-radius: var(--step-16);
     }
   }
   td {
@@ -488,11 +363,11 @@ hr {
 /* @media screen and (min-width: 1024px) { */
 @media (width > 500px) {
   .crud-form {
-    /* margin-bottom: 1rem; */
+    /* margin-bottom: var(--step-16); */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
-    gap: 1rem;
+    gap: var(--step-16);
   }
 }
 @media (width > 1024px) {
