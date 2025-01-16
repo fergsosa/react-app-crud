@@ -26,7 +26,7 @@ const CrudTable = () => {
             data.map((dt) => <CrudTableRow key={dt.id} dt={dt} />)
           ) : (
             <tr>
-              <td colSpan="3">Sin datos</td>
+              <td colSpan="6">Sin datos</td>
             </tr>
           )}
         </tbody>
