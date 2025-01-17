@@ -27,8 +27,12 @@ export const ThemeSwitcherDOS = () => {
   };
 
   return (
-    <button onClick={handleThemeChange}>
-      {theme === "light" ? "Modo oscuro" : "Modo claro"}
-    </button>
+    // <button onClick={handleThemeChange}>
+    //   {theme === "light" ? "Modo oscuro" : "Modo claro"}
+    // </button>
+    <div className="toggle" onClick={handleThemeChange}>
+      <input type="checkbox" />
+      <label></label>
+    </div>
   );
 };

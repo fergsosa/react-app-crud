@@ -16,13 +16,13 @@ const myDiv = {
   textAlign: "center",
 };
 const myTitle = {
-  webkitTextStroke: ".5px #444",
+  // webkitTextStroke: ".5px #444",
 };
 
 function Crud() {
   return (
     <>
-      <div style={myDiv}>
+      <div className="box-titulo">
         <h1 style={myTitle}>CRUD</h1>
         <ThemeSwitcherDOS />
       </div>

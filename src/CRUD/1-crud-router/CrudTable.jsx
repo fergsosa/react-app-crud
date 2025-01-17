@@ -10,7 +10,8 @@ const CrudTable = ({ data, setDataToEdit, deleteData }) => {
             <th>Jugardor</th>
             <th>Equipo</th>
             <th>
-              Número <br /> de remera
+              N° de
+              <br /> remera
             </th>
             <th>Vigente</th>
             <th>tiempo</th>
